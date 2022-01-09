@@ -1,14 +1,10 @@
-function depositProfit(deposit, rate, threshold) {
+function chunkyMonkey(array, length) {
 	//  write code here.
-	if (threshold <= deposit) {
-		return "You have the amount that you need";
-	}
-	let years = 0;
-	for (years; deposit < threshold; years++) {
-		deposit += deposit * (rate / 100);
-	}
-	return years;
+	return new Array(array.slice(0, length), array.slice(length));
 }
 
-let results = depositProfit(100, 20, 170);
+let results = chunkyMonkey(["a", "b", "c", "d"], 2);
+console.log(results);
+
+results = chunkyMonkey([0, 1, 2, 3, 4, 5], 4);
 console.log(results);
