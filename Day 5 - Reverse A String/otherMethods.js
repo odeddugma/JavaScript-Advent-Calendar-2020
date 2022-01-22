@@ -23,3 +23,17 @@ function method2(str) {
 }
 console.log(method2("ABCD"));
 console.log(method2("Oded"));
+
+/* Method 3 */
+function method3(str) {
+	if (!str) return "No string specified";
+	let reverseString = "";
+	let i = str.length - 1;
+	do {
+		reverseString += str[i];
+		i--;
+	} while (i >= 0);
+	return reverseString;
+}
+console.log(method3("Alon"));
+console.log(method3("eulb"));
